@@ -7,4 +7,7 @@ homepage: "https://github.com/AltGr/opam-installext"
 bug-reports: "https://github.com/AltGr/opam-installext/issues"
 license: "LGPL-3.0 with OCaml linking exception"
 dev-repo: "https://github.com/AltGr/opam-installext.git"
-build: [make]
+build: [
+  [make]
+  [make "PREFIX=%{prefix}%" "install"]
+]
