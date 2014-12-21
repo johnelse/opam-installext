@@ -1,3 +1,5 @@
+INSTALL_PATH=$(PREFIX)/bin/opam-installext
+
 all: opam-installext
 
 opam-installext: _build/installext.native
@@ -8,3 +10,6 @@ _build/%:
 
 clean:
 	rm -rf _build opam-installext
+
+install:
+	install opam-installext $(INSTALL_PATH)
