@@ -9,7 +9,7 @@ _build/%:
 	ocamlbuild -tags debug,use_unix $*
 
 clean:
-	rm -rf _build opam-installext
+	rm -rf _build installext.native opam-installext
 
 install:
 	install opam-installext $(INSTALL_PATH)
