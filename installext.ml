@@ -2,9 +2,11 @@
 
 let lines_of_channel ic =
   let rec aux acc =
-    match input_line ic with
-    | s -> aux (s::acc)
-    | exception End_of_file -> acc
+    try
+      let s = input_line ic in
+      aux (s::acc)
+    with End_of_file ->
+      acc
   in
   List.rev (aux [])
 
